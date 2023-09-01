@@ -1,15 +1,18 @@
 /****************************************************************************
  File name:  	main.c
- Author:
- Date:
- Class:
- Assignment:
- Purpose:
+ Author:      cs 460
+ Date:        9/1/2023
+ Class:       cs 460
+ Assignment:  in class process activity
+ Purpose:     demonstrate the process lifecycle
  ****************************************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
- /****************************************************************************
+int gCounter = 0;
+/****************************************************************************
   Function: 	 	main
 
   Description: hello world!
@@ -18,8 +21,22 @@
                argv - the actual command line arguments
 
   Returned:	 	EXIT_SUCCESS
-  ****************************************************************************/
-int main (int argc, char* argv[]) {
-  printf ("HELLO CS STUDENT!\n\n");
-  return EXIT_SUCCESS;
+****************************************************************************/
+int main()
+{
+    gCounter = gCounter + 1;
+
+    printf("%d\n", gCounter);
+    printf("run!");
+    for (int count = 0 ; count < 100; ++count)
+    {
+        for (gCounter = 0; gCounter < 100000000; ++gCounter)
+        {
+            gCounter ++;
+            gCounter --;
+        }
+    }
+    printf("sleep!");
+    sleep(30);
+    printf("wakeup");
 }
