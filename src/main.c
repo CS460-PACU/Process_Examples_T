@@ -27,8 +27,9 @@ int main()
     gCounter = gCounter + 1;
 
     printf("%d\n", gCounter);
-    printf("run!");
-    for (int count = 0 ; count < 100; ++count)
+    printf("run the loops!");
+    // compute for about 30 seconds
+    for (int count = 0 ; count < 300; ++count)
     {
         for (gCounter = 0; gCounter < 100000000; ++gCounter)
         {
@@ -36,7 +37,9 @@ int main()
             gCounter --;
         }
     }
-    printf("sleep!");
+
+    printf("sleep!\n");
+    sleep(30); // 30 seconds
+    printf("wakeup\n");
     sleep(30);
-    printf("wakeup");
 }
