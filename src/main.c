@@ -24,22 +24,22 @@ int gCounter = 0;
 ****************************************************************************/
 int main()
 {
-    gCounter = gCounter + 1;
+	gCounter = gCounter + 1;
 
-    printf("%d\n", gCounter);
-    printf("run the loops!");
-    // compute for about 30 seconds
-    for (int count = 0 ; count < 300; ++count)
-    {
-        for (gCounter = 0; gCounter < 100000000; ++gCounter)
-        {
-            gCounter ++;
-            gCounter --;
-        }
-    }
+	printf("%d\n", gCounter);
+	printf("run the loops!");
+	// compute for about 30 seconds
+	for (int count = 0 ; count < 300; ++count)
+	{
+		for (gCounter = 0; gCounter < 100000000; ++gCounter)
+		{
+			gCounter ++;
+			gCounter --;
+		}
+	}
 
-    printf("sleep!\n");
-    sleep(30); // 30 seconds
-    printf("wakeup\n");
-    sleep(30);
+	printf("sleep!\n");
+	sleep(30); // 30 seconds
+	printf("wakeup\n");
+	sleep(30);
 }
